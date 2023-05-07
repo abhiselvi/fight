@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.banner{
+    padding-top: 20px;
+    background-color: var(--grey);
+    width:100%;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.loginbox img{
+    height: 80px;
+    width: 80px;
+    margin-top: -20px;
+    margin-left: 60px;
+    border-radius: 50%;
+}
+
+.loginbox{
+    width:350px;
+    height:450px;
+    background-color: black;
+    color:#fff;
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding:70px 30px;
+    padding-left: 70px;
+    border:5px var(--orange);
+    border-style: outset;
+}
+
+.loginbox h1{
+    margin:0;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin-left: -20px;
+}
+
+.loginbox input{
+    height: 32px;
+    font-size:20px;
+    outline:none;
+    width:100%;
+    border-top-style:none;
+    border-left-style:none;
+    border-right-style:none;
+    border-bottom-style:2px solid black;
+    margin-left: -20px;
+    margin-bottom: 10px;
+
+}
+
+.loginbox input[type="submit"]{
+    width:200px;
+    height: 40px;
+    top:50%;
+    text-align: center;
+    margin:20px -5px;
+    border-radius: 25px;
+    font-weight: bold;
+    border:2px solid greenyellow;
+    background-color:red;
+    color:#fff;
+    cursor: pointer;  
+    position:relative;
+    overflow:hidden; 
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height:20px;
+    /* padding-left: 60px; */
+    color:yellow;
+}
+
+.loginbox h5{
+    /* margin-left: 10px; */
+}
