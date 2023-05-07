@@ -18,31 +18,37 @@ const passengerSchema = new Schema({
     type: Number,
     required: true,
   },
+  seatNo: {
+    type: Number,
+  },
   passportId: {
     type: String,
-    required: function() {
+    required: function () {
       return !this.aadharId;
-    }
+    },
   },
   aadharId: {
     type: String,
-    required: function() {
+    required: function () {
       return !this.passportId;
-    }
+    },
   },
 });
 
-const bookingSchema = new Schema({
-  flightId: {
-    type: String,
-    required: true,
+const bookingSchema = new Schema(
+  {
+    flightId: {
+      type: String,
+      required: true,
+    },
+    userId: {
+      type: String,
+      required: true,
+    },
+    passengers: [passengerSchema],
   },
-  userId: {
-    type: String,
-    required: true,
-  },
-  passengers: [passengerSchema],
-});
+  { timestamps: true }
+);
 
 const booking = mongoose.model("bookings", bookingSchema);
 module.exports = booking;
