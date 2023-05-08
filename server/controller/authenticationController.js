@@ -192,3 +192,6 @@ exports.protectadmin = async (req, res, next) => {
   }
   next();
 };
+exports.logoutuser=async (req,res,next)=>{
+  res.send("logout")
+}

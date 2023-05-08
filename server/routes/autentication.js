@@ -7,10 +7,12 @@ const {
   protectuser,
   protectadmin,
   getUser,
+  logoutuser
 } = require("../controller/authenticationController");
 
-router.get("/",protectadmin, getAllUsers);
+router.get("/allusers",protectadmin, getAllUsers);
 router.get("/:id",protectuser, getUser)
 router.post("/register", register);
 router.post("/login", login);
+router.get('/logout', logoutuser);
 module.exports = router;
